@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>This ID's owner's result was:</div>
+
+<div class="wpis" th:each="ownerFromtheLoop: ${idThatWasFound}">
+    <div th:text="'Height is: ' + ${ownerFromtheLoop.height}"/>
+    <div th:text="'Weight is: ' + ${ownerFromtheLoop.weight}"/>
+    <div th:text="'Sex is: ' + ${ownerFromtheLoop.sex}"/>
+</div>
+</body>
+</html>
