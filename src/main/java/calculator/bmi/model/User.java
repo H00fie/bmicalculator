@@ -6,12 +6,14 @@ public class User {
     private double weight;
     private char sex;
     private Long id;
+    private Long bmi;
 
-    public User(double height, double weight, char sex, Long id) {
+    public User(double height, double weight, char sex, Long id, Long bmi) {
         this.height = height;
         this.weight = weight;
         this.sex = sex;
         this.id = id;
+        this.bmi = bmi;
     }
 
     public double getHeight() {
@@ -44,5 +46,13 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getBmi() {
+        return bmi;
+    }
+
+    public void setBmi(Long bmi) {
+        this.bmi = bmi;
     }
 }

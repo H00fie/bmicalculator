@@ -1,0 +1,25 @@
+#header{
+    text-align: center;
+        font-size: 40px;
+        background-color: pink;
+        margin: 10px;
+        margin-left:600px;
+        margin-right:600px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border: 5px solid black;
+}
+
+.overall{
+    background-color: pink;
+    text-align: center;
+    margin: 10px;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-top: 50px;
+    border: 1px solid black;
+    }
+
+.submitButton{
+    text-align: center;
+    }

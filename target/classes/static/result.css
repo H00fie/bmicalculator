@@ -1,0 +1,22 @@
+#header{
+
+text-align: center;
+    font-size: 40px;
+    background-color: pink;
+    margin: 10px;
+    margin-left:600px;
+    margin-right:600px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 5px solid black;
+
+}
+
+.overall    {
+    background-color: hotpink;
+    text-align: center;
+    border: 5px solid black;
+    margin-left: 600px;
+    margin-right: 600px;
+    font-size: 20px;
+}

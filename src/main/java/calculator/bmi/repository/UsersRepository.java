@@ -2,13 +2,14 @@ package calculator.bmi.repository;
 
 import calculator.bmi.model.User;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class UsersRepository {
 
-    private static List<User> usersList = new ArrayList<>();
+    public static List<User> usersList = new ArrayList<>();
 
 
     public static void addNewUser(User user) {
@@ -40,5 +41,9 @@ public class UsersRepository {
         } else {
         }
         return result;
+
     }
+
+
 }
+

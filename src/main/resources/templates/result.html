@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="result.css">
 </head>
 <body>
-<div>Are you fat or what?</div>
+<div id="header">Your result is:</div>
+<div class="overall">
 <div th:text="'BMI: ' + ${myResult}"/>
 <div th:text="'Your ID: ' + ${myId}"/>
+</div>
+
 
 
 

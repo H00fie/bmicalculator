@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="idResult.css">
 </head>
 <body>
-<div>This ID's owner's result was:</div>
+<div id="header">This ID's owner provided following parameters:</div>
 
-<div class="wpis" th:each="ownerFromtheLoop: ${idThatWasFound}">
-    <div th:text="'Height is: ' + ${ownerFromtheLoop.height}"/>
-    <div th:text="'Weight is: ' + ${ownerFromtheLoop.weight}"/>
-    <div th:text="'Sex is: ' + ${ownerFromtheLoop.sex}"/>
+<div th:each="ownerFromtheLoop: ${idThatWasFound}">
+    <div class="menu1">
+    <div th:text="'Height: ' + ${ownerFromtheLoop.height}"/>
+    <div th:text="'Weight: ' + ${ownerFromtheLoop.weight}"/>
+    <div th:text="'Sex: ' + ${ownerFromtheLoop.sex}"/>
+    </div>
+
+<div class="subheader">The result:</div>
+    <div class="menu2">
+    <div th:text="'BMI: ' + ${ownerFromtheLoop.bmi}"/>
+    </div>
 </div>
 </body>
 </html>

@@ -9,14 +9,24 @@
 
 <form method="post">
 <div id="header">Kalkulator BMI</div>
-    <input type="text" name="heightParameter" placeholder="Height">
+    <div class="subheader">Provide required parameters below:</div>
+    <div class="overall">
+        <div class= "height">
+        <input type="text" name="heightParameter" placeholder="Height">
+        </div>
+            <div class= "weight">
         <input type="text" name="weightParameter" placeholder="Weight">
+            </div>
+                <div class= "sex">
         <input type="text" name="sexParameter" placeholder="Sex">
+                 </div>
         <input type="submit" value="Calculate">
+                </div>
+
     </form>
 
-<div id ="menu">
-    <a class="menu-button" href="/searchForm">Search ID</a>
+<div class="menu">
+    <a class="menu-button" href="/searchForm">Search by ID</a>
 </div>
 
 
