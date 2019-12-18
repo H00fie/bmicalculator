@@ -38,14 +38,13 @@ public class BmiController {
        /* if (!sexParameter.equals("M") && !sexParameter.equals("m") && !sexParameter.equals("K") && !sexParameter.equals("k")) {
             return "error";
         } else {*/
-            usersRepository.addNewUser(newUser);
-            double finalResult = UsersRepository.bmiResult(heightParameter, weightParameter, sexParameter);
-            newUser.setBmi((finalResult));
-
-            model.addAttribute("myResult", finalResult);
-            // model.addAttribute("myId", anotherId);
-            return "result";
-        }
+        int finalResult = (int) UsersRepository.bmiResult(heightParameter, weightParameter, sexParameter);
+        newUser.setBmi((finalResult));
+        usersRepository.addNewUser(newUser);
+        model.addAttribute("myResult", finalResult);
+        // model.addAttribute("myId", anotherId);
+        return "result";
+    }
 
 
     @RequestMapping(value = "/searchForm", method = RequestMethod.POST)

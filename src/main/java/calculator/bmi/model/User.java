@@ -68,4 +68,15 @@ public class User {
     public void setBmi(double bmi) {
         this.bmi = bmi;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", sex='" + sex + '\'' +
+                ", bmi=" + bmi +
+                '}';
+    }
 }
