@@ -35,15 +35,19 @@ public class BmiController {
                              Model model) {
 
         User newUser = new User(heightParameter, weightParameter, sexParameter);
-       /* if (!sexParameter.equals("M") && !sexParameter.equals("m") && !sexParameter.equals("K") && !sexParameter.equals("k")) {
+        if (!sexParameter.equals("M") && !sexParameter.equals("m") && !sexParameter.equals("K") && !sexParameter.equals("k")) {
             return "error";
-        } else {*/
-        int finalResult = (int) UsersRepository.bmiResult(heightParameter, weightParameter, sexParameter);
-        newUser.setBmi((finalResult));
-        usersRepository.addNewUser(newUser);
-        model.addAttribute("myResult", finalResult);
-        // model.addAttribute("myId", anotherId);
-        return "result";
+        } else {
+            int finalResult = (int) UsersRepository.bmiResult(heightParameter, weightParameter, sexParameter);
+            newUser.setBmi((finalResult));
+            newUser.setHeight(heightParameter);
+            newUser.setWeight(weightParameter);
+            newUser.setSex(sexParameter);
+            usersRepository.addNewUser(newUser);
+            model.addAttribute("myResult", finalResult);
+            // model.addAttribute("myId", anotherId);
+            return "result";
+        }
     }
 
 

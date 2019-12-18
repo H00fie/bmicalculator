@@ -17,6 +17,10 @@ public class User {
     private String sex;
     private double bmi;
 
+    public User(){
+
+    }
+
     public User(int heightParameter, int weightParameter, String sexParameter){
 
     }
