@@ -44,9 +44,10 @@ public class BmiController {
             newUser.setWeight(weightParameter);
             newUser.setSex(sexParameter);
             usersRepository.addNewUser(newUser);
+            int finalId = usersRepository.getId(newUser);
             // w tym miejscu chyba muszę jebnąć jakąś metodę, która wyciągnie to ID
             model.addAttribute("myResult", finalResult);
-            // model.addAttribute("myId", anotherId);
+            model.addAttribute("myId", finalId);
             return "result";
         }
     }

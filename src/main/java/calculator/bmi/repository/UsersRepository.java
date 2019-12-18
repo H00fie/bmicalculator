@@ -24,6 +24,16 @@ public class UsersRepository {
         session.close();
 
 
+
+    }
+
+    public int getId(User user){
+        Session sessionGetId = hsfs.getSession();
+        sessionGetId.createQuery("FROM calculator.bmi.model.User WHERE id = " + user.getId());
+        sessionGetId.close();
+        int id = user.getId();
+        return id;
+
     }
 
     public void updateUser(User user) {
