@@ -1,14 +1,27 @@
 package calculator.bmi.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
-    private double height;
-    private double weight;
-    private char sex;
-    private Long id;
-    private Long bmi;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private int height;
+    private int weight;
+    private String sex;
+    private double bmi;
 
-    public User(double height, double weight, char sex, Long id, Long bmi) {
+    public User(int heightParameter, int weightParameter, String sexParameter){
+
+    }
+
+    public User(int height, int weight, String sex, int id, double bmi) {
         this.height = height;
         this.weight = weight;
         this.sex = sex;
@@ -20,7 +33,7 @@ public class User {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
@@ -28,31 +41,31 @@ public class User {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public char getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(char sex) {
+    public void setSex(String  sex) {
         this.sex = sex;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Long getBmi() {
+    public double getBmi() {
         return bmi;
     }
 
-    public void setBmi(Long bmi) {
+    public void setBmi(double bmi) {
         this.bmi = bmi;
     }
 }

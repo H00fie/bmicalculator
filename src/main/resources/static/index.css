@@ -50,11 +50,10 @@
     margin-top: 50px;
     }
 
-.menu{
-
+.menu-button{
+    text-color: black;
     background-color: hotpink;
     border: 3px solid black;
-    margin-right: 1400px;
     padding: 1px;
     text-align: center;
     font-size: 20px;

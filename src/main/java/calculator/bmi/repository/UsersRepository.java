@@ -1,42 +1,55 @@
 package calculator.bmi.repository;
 
 import calculator.bmi.model.User;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
+@Component
 public class UsersRepository {
 
-    public static List<User> usersList = new ArrayList<>();
+    // public static List<User> usersList = new ArrayList<>();
+
+    @Autowired
+    HibernateSessionFactoryService hsfs;
 
 
-    public static void addNewUser(User user) {
-
-        usersList.add(user);
+    public void addNewUser(User user) {
+        Session session = hsfs.getSession();
+        Transaction tx = session.beginTransaction();
+        session.save(user);
+        tx.commit();
+        session.close();
 
 
     }
 
+    public void updateUser(User user) {
+        Session session = hsfs.getSession();
+        Transaction tx = session.beginTransaction();
+        session.update(user);
+        tx.commit();
+        session.close();
 
-    public static List<User> getUserById(Long id) {
-        List<User> result = new ArrayList<>();
-        for (User user : usersList) {
-            if (user.getId().equals(id)) {
-                result.add(user);
-            }
-        }
-        return result;
 
     }
 
-    public static double bmiResult(double wzrost, double waga, char plec) {
+    public User getUserById(int id) {
+        Session session = this.hsfs.getSession();
+        User user = (User) session.createQuery("FROM calculator.bmi.model.User WHERE id = " + id).uniqueResult();
+        session.close();
+        return user;
+    }
+
+
+    public static double bmiResult(double wzrost, double waga, String plec) {
         double result = 0;
         double preparedWzrost = wzrost / 100;
-        if (plec == 'M') {
+        if (plec.equals("M") || plec.equals("m")) {
             result = waga / (Math.pow(preparedWzrost, 2));
-        } else if (plec == 'K') {
+        } else if (plec.equals("K") || plec.equals("k")) {
             result = waga / (Math.pow(preparedWzrost, 2));
         } else {
         }
