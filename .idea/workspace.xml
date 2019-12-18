@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="629fb8d7-01a0-4268-a68c-23c0c4969416" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/bmi/controllers/BmiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/bmi/controllers/BmiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/bmi/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/bmi/repository/UsersRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/calculator/bmi/controllers/BmiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+            <state relative-caret-position="253">
+              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -533,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/calculator/bmi/controllers/BmiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+        <state relative-caret-position="253">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
