@@ -10,14 +10,14 @@
 
 <div th:each="ownerFromtheLoop: ${idThatWasFound}">
     <div class="menu1">
-    <div th:text="'Height: ' + ${ownerFromtheLoop.height}"/>
-    <div th:text="'Weight: ' + ${ownerFromtheLoop.weight}"/>
-    <div th:text="'Sex: ' + ${ownerFromtheLoop.sex}"/>
+        <div th:text="'Height: ' + ${ownerFromtheLoop.height}"/>
+        <div th:text="'Weight: ' + ${ownerFromtheLoop.weight}"/>
+        <div th:text="'Sex: ' + ${ownerFromtheLoop.sex}"/>
     </div>
 
-<div class="subheader">The result:</div>
+    <div class="subheader">The result:</div>
     <div class="menu2">
-    <div th:text="'BMI: ' + ${ownerFromtheLoop.bmi}"/>
+        <div th:text="'BMI: ' + ${ownerFromtheLoop.bmi}"/>
     </div>
 </div>
 </body>
